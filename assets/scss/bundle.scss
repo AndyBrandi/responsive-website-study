@@ -31,6 +31,7 @@ $container-max-widths: (
 // ---------------------------------------------------------------------------------------
 
 // what percentage of container/screen width 1rem corresponds to
+// (remember: default <body> font-size is 1rem in Bootstrap)
 
 $mobile-percentage: 3.4%;
 $desktop-percentage: 1.9%;
