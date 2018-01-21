@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bundle.css" />
+
+    <title>Responsive website study</title>
+  </head>
+  <body>
+
+    <!-- note how we're always only targetting breakpoints 0 (mobile) and desktop
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-desktop navbar-light bg-light">
+      <a class="navbar-brand" href="#">KuteKittens</a>
+      <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Browse kittens</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-desktop-0">
+          <input class="form-control mr-desktop-2" type="search" placeholder="Kittens in your city" aria-label="Search">
+          <button class="btn btn-outline-primary my-2 my-desktop-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+
+    <!-- DISPLAY BREAKPOINT -->
+    <h3 class="p-3 text-center text-muted mt-4">
+      <div class="d-block d-desktop-none">
+        Breakpoint 1: mobile
+      </div>
+
+      <div class="d-none d-desktop-block d-max-none">
+        Breakpoint 2: desktop
+      </div>
+
+      <div class="d-none d-max-block">
+        Breakpoint "2.5": desktop (max-width, same layout)
+      </div>
+    </h3>
+
+
+
+
+    <!-- CONTENT -->
+    <div class="mb-5 mt-3 container-fluid px-desktop-5">
+
+      <hr class="my-4 w-50 mx-auto" />
+
+      <h1 class="text-center">Fully responsive website with minimal effort</h1>
+
+
+      <div class="text-center mt-4">
+        <a href="#pros-cons" class="btn btn-outline-primary">Show pros/cons</a>
+      </div>
+
+
+      <hr class="my-5 w-50 mx-auto" />
+
+
+      <div class="row mb-5">
+        <div class="col-12 col-desktop-7">
+          <img src="assets/img/kitten.jpg" class="img-fluid d-block">
+        </div>
+
+        <div class="col-12 col-desktop-5 mt-4 mt-desktop-0">
+          <h4>Cute kitten</h4>
+
+          <div class="mb-3">
+            <div class="text-uppercase">Age:</div>
+            <div class="text-muted">5 Weeks</div>
+          </div>
+
+          <div class="mb-3">
+            <div class="text-uppercase">Cuteness:</div>
+            <div class="text-muted">Exceeding average</div>
+          </div>
+
+          <div>
+            <div class="text-uppercase">Description:</div>
+            <div class="text-muted">Cute silver tabby kitten who likes to stare at the sky while sitting on a stone wall next to a tree.</div>
+          </div>
+        </div>
+      </div>
+
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+
+      <div class="card mt-5">
+        <div class="card-body">
+          <h4 class="text-center mb-4 text-muted">Apply to meet kitten</h4>
+
+          <form>
+            <div class="form-group">
+              <label>Your name</label>
+              <input class="form-control" placeholder="John Smith" />
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label>Postal Code</label>
+                  <input class="form-control" placeholder="Wow, long number!" />
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="form-group">
+                  <label>City</label>
+                  <input class="form-control" placeholder="Berlin" />
+                </div>
+              </div>
+            </div>
+
+
+            <div class="mt-4 text-center">
+              <button type="button" class="btn btn-primary">Kitten please</button>
+
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- PROS/CONS POPUP -->
+    <div class="popup pt-5" id="pros-cons">
+      <div class="container-fluid">
+        <div class="card popup-content">
+          <div class="card-body">
+
+            <a href="#" class="float-right btn btn-link">&times;</a>
+
+            <h2 class="text-muted">Pros</h2>
+
+            <ul>
+              <li>super easy to implement</li>
+              <li>pages <em>always</em> look the same for a given breakpoint/screen target, no matter the screen width</li>
+              <li>&lt;br&gt; tags are actually useful!
+              <li>great results with only 2 breakpoints (and consequently, only 2 designs)</li>
+              <li>just as easy for 3 or more targets (eg. mobile, tablet, desktop)</li>
+            </ul>
+
+            <hr class="my-4 w-50 mx-auto" />
+
+            <h2 class="text-muted">Cons</h2>
+
+            <ul>
+              <li>rem units <em>only</em>, so be prepared to override pixel values everywhere</li>
+              <li>3rd party plug-ins with pixels can be a nightmare</li>
+              <li>font-size scaling in the browser doesn't really work</li>
+              <li>does not work that well for apps (since resizing the window to get more screen estate has no effect)</li>
+              <li>desktop view can feel too large with only 2 breakpoints</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

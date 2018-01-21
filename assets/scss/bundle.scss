@@ -1,0 +1,100 @@
+// Bootstrap grid gutter width is defined in px by default, but we use rem
+$grid-gutter-width: 2rem;
+
+// this is where the container-fluid ceases to be fluid (see below)
+$max-width: 1100px;
+
+// Bootstrap grid breakpoints: these generate the "responsive" classes 
+// (e.g. d-none or d-desktop-block)
+$grid-breakpoints: (
+  mobile: 0,
+  desktop: 900px,
+  max: $max-width // nothing special here, just for convenience
+);
+
+
+/*
+  Bootstrap max container widths
+  values don't matter (we do not use the .container fixed-width container), so just whatever
+*/
+$container-max-widths: (
+  mobile: 0px,
+  desktop: 1px,
+  max: 2px,
+);
+
+
+// import Bootstrap with the custom parameters defined above
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+
+// ---------------------------------------------------------------------------------------
+
+// what percentage of container/screen width 1rem corresponds to
+
+$mobile-percentage: 3.4%;
+$desktop-percentage: 1.9%;
+
+
+// set rem reference lengths
+
+// mobile (fluid)
+html {
+  font-size: $mobile-percentage * 1vw/1%;
+}
+
+
+// desktop (fluid)
+@include media-breakpoint-up(desktop) {
+  html {
+    font-size: $desktop-percentage * 1vw/1%;
+  }
+}
+
+// desktop (max-width)
+@include media-breakpoint-up(max) {
+  html {
+    font-size: $max-width / 100% * $desktop-percentage;
+  }
+}
+
+
+// limit fluidity to a certain maximum width
+.container-fluid {
+  margin: auto;
+  max-width: $max-width;
+}
+
+
+// ---------------------------------------------------------------------------------------
+
+body {
+  position: relative;
+}
+
+
+.popup {
+  display: none;
+  background-color: rgba(0,0,0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+
+  &:target {
+    display: block;
+  }
+
+  .popup-content {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+  }
+}
+
+
+ul {
+  line-height: 1.9;
+}

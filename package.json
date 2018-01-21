@@ -1,0 +1,14 @@
+{
+  "name": "responsive-study",
+  "version": "1.0.0",
+  "description": "Responsive website case study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andy Brandscher",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.3"
+  }
+}
