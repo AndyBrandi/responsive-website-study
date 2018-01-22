@@ -60,7 +60,7 @@
 
 
     <!-- CONTENT -->
-    <div class="mb-5 mt-3 container-fluid px-desktop-5">
+    <div class="pb-5 mt-3 container-fluid px-desktop-5">
 
       <hr class="my-4 w-50 mx-auto" />
 
@@ -156,8 +156,8 @@
 
             <ul>
               <li>super easy to implement</li>
-              <li>pages <em>always</em> look the same for a given breakpoint/screen target, no matter the screen width</li>
-              <li>&lt;br&gt; tags are actually useful!
+              <li>pages <em>always</em> (with some caveats, see below) look the same for a given breakpoint/screen target, no matter the screen width</li>
+              <li><code>&lt;br&gt;</code> tags are actually useful!
               <li>great results with only 2 breakpoints (and consequently, only 2 designs)</li>
               <li>just as easy for 3 or more targets (eg. mobile, tablet, desktop)</li>
             </ul>
@@ -167,11 +167,16 @@
             <h2 class="text-muted">Cons</h2>
 
             <ul>
-              <li>rem units <em>only</em>, so be prepared to override pixel values everywhere</li>
+              <li><code>rem</code> units <em>only</em>, so be prepared to override pixel values everywhere</li>
               <li>3rd party plug-ins with pixels can be a nightmare</li>
-              <li>font-size scaling in the browser doesn't really work</li>
+              <li>Font-size scaling in the browser doesn't really work</li>
               <li>does not work that well for apps (since resizing the window to get more screen estate has no effect)</li>
-              <li>desktop view can feel too large with only 2 breakpoints</li>
+              <li>Desktop view can feel too large with only 2 breakpoints</li>
+              <li>
+                <em>Font scaling is not perfect:</em>
+                rounding errors sometimes make text wrap differently for very specific window dimensions. 
+                (Solution: use <code>white-space: nowrap</code> if text wrapping breaks the layout)
+              </li>
             </ul>
           </div>
 
